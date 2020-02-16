@@ -10,7 +10,7 @@ public class Osoba {
 
     //konstruktor bezparametrowy
 //    jesli nie ma zadnego konstruktora to pusty  konstruktor jest generowany automatycznie
-//    jesli potrzebujemy JAWNIE konstruktor parametrwy, to ten konstruktor juz nie jest generowany automatycznie
+//    jesli potrzebujemy JAWNIE konstruktor parametrowy, to ten konstruktor juz nie jest generowany automatycznie
 //    jesli potrzebujemy domyslnego konstruktora to musimy do zdefiniowac JAWNIE
 //    jesli usuniemy ten konstruktor to bedziemy musieli zawsze tworzyc obiekty osoba
 //    za pomoca konstruktora 3 argumentowego

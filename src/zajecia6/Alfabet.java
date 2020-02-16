@@ -5,7 +5,7 @@ public class Alfabet {
         String alfabet = "abcdefghijklmnoprstuwxyz";
         for (int i = 0; i < alfabet.length(); i++) {
             int kod = alfabet.charAt(i);
-            System.out.println(kod);
+            System.out.println((int) alfabet.charAt(i));
         }
     }
 }
