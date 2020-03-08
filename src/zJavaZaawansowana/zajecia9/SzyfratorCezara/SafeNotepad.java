@@ -1,4 +1,4 @@
-package zJavaZaawansowana.zajecia9;
+package zJavaZaawansowana.zajecia9.SzyfratorCezara;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -20,13 +20,13 @@ public class SafeNotepad {
                 char x = (char) c;
                 if (x == ' ') {
                     System.out.print(" ");
+                    outputStream.write(" ");
                 } else {
                     System.out.print((char) (c + 5));
                     outputStream.write((char) (c + 5));
                 }
 
             }
-
 
         } catch (
                 IOException e) {
@@ -39,7 +39,6 @@ public class SafeNotepad {
             if (outputStream != null) {
                 outputStream.close();
             }
-
         }
     }
 }
