@@ -18,12 +18,16 @@ public class Bank {
         System.out.println(c1);
 
         try {
-            a1.withraw(-5);
+            a1.withraw(600);
         } catch (NegativeWithrawException e) {
             System.out.println("Sytuacja wyjątkowa! " + e.getMessage());
+        } catch (NegativeBalanceException e) {
+            e.printStackTrace();
+            System.out.println("Próbujesz wypłacić więcej niż masz");
         } finally {
             System.out.println("zawsze sie wykonam");
         }
+
         System.out.println("Hello");
 
 

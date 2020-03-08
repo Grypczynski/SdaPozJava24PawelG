@@ -20,7 +20,7 @@ public class Account {
         balance += cash;
     }
 
-    public int withraw(int cash) throws NegativeWithrawException {
+    public int withraw(int cash) throws NegativeWithrawException, NegativeBalanceException {
 
         if (cash < 0) {
             throw new NegativeWithrawException("Próba wyplaty mniej niż 1 zł"); //inna metoda z uzyciem rzutowania wyjątków
@@ -33,7 +33,7 @@ public class Account {
             balance -= cash;
             return cash;
         } else {
-            return 0;
+            throw new NegativeBalanceException();
         }
 
     }
