@@ -8,7 +8,7 @@ public class Bank {
 //        if (c2 instanceof BussinessClient) {
 //            System.out.println("Biznesowy " + ((BussinessClient) c2).getNip()); // rzutowanie
 //        }
-        CreditAccount a1 = new CreditAccount("1234", 500, c1);
+        CheckingAccount a1 = new CheckingAccount("1234", 500, c1);
         CheckingAccount a2 = new CheckingAccount("2341", 100, c1);
         CreditAccount a3 = new CreditAccount("3412", 200, c2);
 
@@ -16,6 +16,16 @@ public class Bank {
         System.out.println(a2);
         System.out.println(a3);
         System.out.println(c1);
+
+        try {
+            a1.withraw(-5);
+        } catch (NegativeWithrawException e) {
+            System.out.println("Sytuacja wyjątkowa! " + e.getMessage());
+        } finally {
+            System.out.println("zawsze sie wykonam");
+        }
+        System.out.println("Hello");
+
 
     }
 }

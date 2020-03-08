@@ -20,18 +20,22 @@ public class Account {
         balance += cash;
     }
 
-    public int withraw(int cash) {
+    public int withraw(int cash) throws NegativeWithrawException {
 
         if (cash < 0) {
-            System.out.println("Nie można wypłacić kwoty mniejszej od 1 zł");
-            return 0;
+            throw new NegativeWithrawException("Próba wyplaty mniej niż 1 zł"); //inna metoda z uzyciem rzutowania wyjątków
         }
+//            System.out.println("Nie można wypłacić kwoty mniejszej od 1 zł");
+//            return 0;
+//        }
+//
         if (canWithraw(cash)) {
             balance -= cash;
             return cash;
         } else {
             return 0;
         }
+
     }
 
     public boolean transfer(Account target, int amount) {

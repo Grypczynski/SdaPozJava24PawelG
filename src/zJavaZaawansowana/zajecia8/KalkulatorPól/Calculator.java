@@ -16,12 +16,21 @@ public class Calculator {
 
     private static Shape getRandomShape() {
         Random random = new Random();
+        Shape result = null;
         switch (random.nextInt(4)) {
             case 0:
-                return new Triangle(random.nextDouble(), random.nextDouble(), random.nextDouble(), random.nextDouble());
+                result = new Triangle(random.nextDouble(), random.nextDouble(), random.nextDouble(), random.nextDouble());
+                break;
             case 1:
+                result = new Rectangle(random.nextDouble(), random.nextDouble());
+                break;
+            case 2:
+                result = new Square(random.nextDouble());
+                break;
+            case 3:
+                result = new Circle(random.nextDouble());
                 break;
         }
-        return null;
+        return result;
     }
 }
